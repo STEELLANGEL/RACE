@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2048_WindowsForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,9 @@ namespace Race
             secondLanesMenu[2] = secondLaneMenu3;
             secondLanesMenu[3] = secondLaneMenu4;
             secondLanesMenu[4] = secondLaneMenu5;
+
+            roadTimer.Stop();
+            oncomingCarsTimer.Stop();
         }
 
         private void StartGame()
@@ -355,6 +359,13 @@ namespace Race
                 oncomingCarsTimer.Enabled = false;
                 pausePanel.Show();
             }
+        }
+
+        private void resultButton_Click(object sender, EventArgs e)
+        {
+            resultForm f = new resultForm();
+            f.Show();
+            this.Hide();
         }
     }
 }
