@@ -94,6 +94,7 @@ namespace Race
         private void GameOver()
         {
             user.Coin = coins;
+            user.Score = score / 10;
 
             roadTimer.Stop();
             oncomingCarsTimer.Stop();

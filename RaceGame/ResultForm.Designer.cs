@@ -28,103 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.closeResultButton = new System.Windows.Forms.Button();
-            this.userNameLabel = new System.Windows.Forms.Label();
-            this.deliteResults = new System.Windows.Forms.Button();
-            this.resultBoard = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RightUnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.resultBoard)).BeginInit();
-            this.SuspendLayout();
+            splitter1 = new Splitter();
+            closeResultButton = new Button();
+            userNameLabel = new Label();
+            deliteResults = new Button();
+            resultBoard = new DataGridView();
+            UserName = new DataGridViewTextBoxColumn();
+            RightUnswer = new DataGridViewTextBoxColumn();
+            score = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)resultBoard).BeginInit();
+            SuspendLayout();
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 575);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
+            splitter1.Location = new Point(0, 0);
+            splitter1.Margin = new Padding(4, 5, 4, 5);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(4, 885);
+            splitter1.TabIndex = 1;
+            splitter1.TabStop = false;
             // 
             // closeResultButton
             // 
-            this.closeResultButton.Location = new System.Drawing.Point(85, 339);
-            this.closeResultButton.Name = "closeResultButton";
-            this.closeResultButton.Size = new System.Drawing.Size(198, 102);
-            this.closeResultButton.TabIndex = 3;
-            this.closeResultButton.Text = "ВЕРНУТЬСЯ В МЕНЮ";
-            this.closeResultButton.UseVisualStyleBackColor = true;
-            this.closeResultButton.Click += new System.EventHandler(this.outFromResultButton_Click);
+            closeResultButton.Location = new Point(113, 522);
+            closeResultButton.Margin = new Padding(4, 5, 4, 5);
+            closeResultButton.Name = "closeResultButton";
+            closeResultButton.Size = new Size(264, 157);
+            closeResultButton.TabIndex = 3;
+            closeResultButton.Text = "ВЕРНУТЬСЯ В МЕНЮ";
+            closeResultButton.UseVisualStyleBackColor = true;
+            closeResultButton.Click += outFromResultButton_Click;
             // 
             // userNameLabel
             // 
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(20, 12);
-            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(103, 13);
-            this.userNameLabel.TabIndex = 4;
-            this.userNameLabel.Text = "Имя пользователя";
+            userNameLabel.AutoSize = true;
+            userNameLabel.Location = new Point(27, 18);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(139, 20);
+            userNameLabel.TabIndex = 4;
+            userNameLabel.Text = "Имя пользователя";
             // 
             // deliteResults
             // 
-            this.deliteResults.Location = new System.Drawing.Point(85, 75);
-            this.deliteResults.Name = "deliteResults";
-            this.deliteResults.Size = new System.Drawing.Size(198, 102);
-            this.deliteResults.TabIndex = 5;
-            this.deliteResults.Text = "Удалить результаты";
-            this.deliteResults.UseVisualStyleBackColor = true;
-            this.deliteResults.Click += new System.EventHandler(this.deliteResults_Click);
+            deliteResults.Location = new Point(113, 115);
+            deliteResults.Margin = new Padding(4, 5, 4, 5);
+            deliteResults.Name = "deliteResults";
+            deliteResults.Size = new Size(264, 157);
+            deliteResults.TabIndex = 5;
+            deliteResults.Text = "Удалить результаты";
+            deliteResults.UseVisualStyleBackColor = true;
+            deliteResults.Click += deliteResults_Click;
             // 
             // resultBoard
             // 
-            this.resultBoard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultBoard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.resultBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserName,
-            this.RightUnswer});
-            this.resultBoard.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.resultBoard.Location = new System.Drawing.Point(372, 58);
-            this.resultBoard.Margin = new System.Windows.Forms.Padding(2);
-            this.resultBoard.Name = "resultBoard";
-            this.resultBoard.RowHeadersWidth = 30;
-            this.resultBoard.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.resultBoard.RowTemplate.Height = 24;
-            this.resultBoard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.resultBoard.Size = new System.Drawing.Size(353, 397);
-            this.resultBoard.TabIndex = 6;
+            resultBoard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            resultBoard.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            resultBoard.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resultBoard.Columns.AddRange(new DataGridViewColumn[] { UserName, RightUnswer, score });
+            resultBoard.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            resultBoard.Location = new Point(496, 89);
+            resultBoard.Name = "resultBoard";
+            resultBoard.RowHeadersWidth = 30;
+            resultBoard.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            resultBoard.RowTemplate.Height = 24;
+            resultBoard.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            resultBoard.Size = new Size(471, 611);
+            resultBoard.TabIndex = 6;
             // 
             // UserName
             // 
-            this.UserName.HeaderText = "Имя";
-            this.UserName.MinimumWidth = 6;
-            this.UserName.Name = "UserName";
+            UserName.HeaderText = "Имя";
+            UserName.MinimumWidth = 6;
+            UserName.Name = "UserName";
             // 
             // RightUnswer
             // 
-            this.RightUnswer.HeaderText = "Колличество правильных ответов";
-            this.RightUnswer.MinimumWidth = 6;
-            this.RightUnswer.Name = "RightUnswer";
+            RightUnswer.HeaderText = "Coins";
+            RightUnswer.MinimumWidth = 6;
+            RightUnswer.Name = "RightUnswer";
+            // 
+            // score
+            // 
+            score.HeaderText = "Score";
+            score.MinimumWidth = 6;
+            score.Name = "score";
             // 
             // resultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 575);
-            this.Controls.Add(this.resultBoard);
-            this.Controls.Add(this.deliteResults);
-            this.Controls.Add(this.userNameLabel);
-            this.Controls.Add(this.closeResultButton);
-            this.Controls.Add(this.splitter1);
-            this.Name = "resultForm";
-            this.Text = "ResultForm";
-            this.Load += new System.EventHandler(this.ResultForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.resultBoard)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1064, 885);
+            Controls.Add(resultBoard);
+            Controls.Add(deliteResults);
+            Controls.Add(userNameLabel);
+            Controls.Add(closeResultButton);
+            Controls.Add(splitter1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "resultForm";
+            Text = "ResultForm";
+            Load += ResultForm_Load;
+            ((System.ComponentModel.ISupportInitialize)resultBoard).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -135,7 +140,8 @@
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.Button deliteResults;
         private System.Windows.Forms.DataGridView resultBoard;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RightUnswer;
+        private DataGridViewTextBoxColumn UserName;
+        private DataGridViewTextBoxColumn RightUnswer;
+        private DataGridViewTextBoxColumn score;
     }
 }

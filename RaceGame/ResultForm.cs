@@ -24,7 +24,7 @@ namespace Race
 
             foreach (var result in results)
             {
-                resultBoard.Rows.Add(result.Name, result.Coin);
+                resultBoard.Rows.Add(result.Name, result.Coin,result.Score);
             }
         }
 
