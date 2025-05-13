@@ -34,6 +34,7 @@
             gamePanel = new Panel();
             pausePanel = new Panel();
             menuPanel = new Panel();
+            resultButton = new Button();
             helpButton = new Button();
             menuExitButton = new Button();
             startButton = new Button();
@@ -80,7 +81,7 @@
             middleLane = new Label();
             oncomingCarsTimer = new System.Windows.Forms.Timer(components);
             menuTimer = new System.Windows.Forms.Timer(components);
-            resultButton = new Button();
+            userNameLabel = new Label();
             gamePanel.SuspendLayout();
             pausePanel.SuspendLayout();
             menuPanel.SuspendLayout();
@@ -152,6 +153,7 @@
             // menuPanel
             // 
             menuPanel.BackColor = SystemColors.ControlDarkDark;
+            menuPanel.Controls.Add(userNameLabel);
             menuPanel.Controls.Add(resultButton);
             menuPanel.Controls.Add(helpButton);
             menuPanel.Controls.Add(menuExitButton);
@@ -176,6 +178,17 @@
             menuPanel.Name = "menuPanel";
             menuPanel.Size = new Size(515, 867);
             menuPanel.TabIndex = 57;
+            // 
+            // resultButton
+            // 
+            resultButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            resultButton.Location = new Point(167, 596);
+            resultButton.Name = "resultButton";
+            resultButton.Size = new Size(176, 71);
+            resultButton.TabIndex = 83;
+            resultButton.Text = "Result";
+            resultButton.UseVisualStyleBackColor = true;
+            resultButton.Click += resultButton_Click;
             // 
             // helpButton
             // 
@@ -698,16 +711,15 @@
             menuTimer.Interval = 1;
             menuTimer.Tick += MenuTimer_Tick;
             // 
-            // resultButton
+            // userNameLabel
             // 
-            resultButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            resultButton.Location = new Point(167, 596);
-            resultButton.Name = "resultButton";
-            resultButton.Size = new Size(176, 71);
-            resultButton.TabIndex = 83;
-            resultButton.Text = "Result";
-            resultButton.UseVisualStyleBackColor = true;
-            resultButton.Click += resultButton_Click;
+            userNameLabel.AutoSize = true;
+            userNameLabel.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            userNameLabel.Location = new Point(16, 251);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(77, 38);
+            userNameLabel.TabIndex = 84;
+            userNameLabel.Text = "Имя";
             // 
             // RaceGame
             // 
@@ -797,5 +809,6 @@
 		private Label firstLaneMenu1;
 		private Label label12;
         private Button resultButton;
+        private Label userNameLabel;
     }
 }

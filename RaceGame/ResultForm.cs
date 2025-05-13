@@ -11,6 +11,12 @@ namespace Race
         {
             InitializeComponent();
         }
+        public resultForm(String userNameTransfer)
+        {
+            InitializeComponent();
+            userNameLabel.Text = userNameTransfer;
+        }
+
 
         private void ResultForm_Load(object sender, EventArgs e)
         {
@@ -18,7 +24,7 @@ namespace Race
 
             foreach (var result in results)
             {
-                resultBoard.Rows.Add(result.Name , result.Score);
+                resultBoard.Rows.Add(result.Name, result.Coin);
             }
         }
 

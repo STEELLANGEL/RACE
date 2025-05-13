@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RaceCommon;
 
 namespace Race
 {
@@ -25,6 +26,8 @@ namespace Race
         private Label[] firstLanesMenu = new Label[5];
         private Label[] secondLanesMenu = new Label[5];
 
+        public User user;
+
         Random random = new Random();
 
         public RaceGame()
@@ -32,8 +35,16 @@ namespace Race
             InitializeComponent();
         }
 
+        public RaceGame(String userNameTransfer)
+        {
+            InitializeComponent();
+            userNameLabel.Text = userNameTransfer;
+        }
+
         private void RaceGame_Load(object sender, EventArgs e)
         {
+            user = new User(userNameLabel.Text);
+
             firstLanes[0] = firstLane1;
             firstLanes[1] = firstLane2;
             firstLanes[2] = firstLane3;
@@ -82,6 +93,8 @@ namespace Race
 
         private void GameOver()
         {
+            user.Coin = coins;
+
             roadTimer.Stop();
             oncomingCarsTimer.Stop();
 
@@ -107,6 +120,7 @@ namespace Race
                     menuPanel.Show();
                 }
             }
+            UserManager.Append(user);
         }
 
         private void Restart()
@@ -149,6 +163,7 @@ namespace Race
                 coin3.Top = -coin3.Height;
                 coin3.Left = random.Next(240, 300);
             }
+
         }
 
         private void OncomingCarsTimer_Tick(object sender, EventArgs e)
