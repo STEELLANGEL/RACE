@@ -1,4 +1,4 @@
-﻿namespace _2048_WindowsForms
+﻿namespace Race
 {
     partial class resultForm
     {

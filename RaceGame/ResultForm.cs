@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Race;
 using RaceCommon;
 
-namespace _2048_WindowsForms
+namespace Race
 {
     public partial class resultForm: Form
     {
@@ -12,13 +11,6 @@ namespace _2048_WindowsForms
         {
             InitializeComponent();
         }
-
-        public resultForm(String userNameTransfer)
-        {
-            InitializeComponent();
-            userNameLabel.Text = userNameTransfer;
-        }
-
 
         private void ResultForm_Load(object sender, EventArgs e)
         {
