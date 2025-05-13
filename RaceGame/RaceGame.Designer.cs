@@ -30,172 +30,172 @@
 		{
 			components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RaceGame));
-			timerRoad = new System.Windows.Forms.Timer(components);
-			panelGame = new Panel();
-			panelMenu = new Panel();
-			buttonHelp = new Button();
-			buttonMenuExit = new Button();
-			buttonStart = new Button();
+			roadTimer = new System.Windows.Forms.Timer(components);
+			gamePanel = new Panel();
+			menuPanel = new Panel();
+			helpButton = new Button();
+			menuExitButton = new Button();
+			startButton = new Button();
 			label3 = new Label();
-			CarMenu1 = new PictureBox();
-			CarMenu3 = new PictureBox();
-			CarMenu2 = new PictureBox();
-			MenuTwoLane5 = new Label();
-			MenuTwoLane4 = new Label();
-			MenuTwoLane3 = new Label();
-			MenuTwoLane2 = new Label();
-			MenuTwoLane1 = new Label();
-			MenuOneLane5 = new Label();
-			MenuOneLane4 = new Label();
-			MenuOneLane3 = new Label();
-			MenuOneLane2 = new Label();
-			MenuOneLane1 = new Label();
+			carMenu1 = new PictureBox();
+			carMenu3 = new PictureBox();
+			carMenu2 = new PictureBox();
+			secondLaneMenu5 = new Label();
+			secondLaneMenu4 = new Label();
+			secondLaneMenu3 = new Label();
+			secondLaneMenu2 = new Label();
+			secondLaneMenu1 = new Label();
+			firstLaneMenu5 = new Label();
+			firstLaneMenu4 = new Label();
+			firstLaneMenu3 = new Label();
+			firstLaneMenu2 = new Label();
+			firstLaneMenu1 = new Label();
 			label12 = new Label();
-			panelPause = new Panel();
-			buttonExit = new Button();
-			buttonResume = new Button();
+			pausePanel = new Panel();
+			exitButton = new Button();
+			resumeButton = new Button();
 			pictureFlag = new PictureBox();
-			labelPause = new Label();
-			labelScore = new Label();
-			labelCoins = new Label();
+			pauseLabel = new Label();
+			scoreLabel = new Label();
+			coinsLabel = new Label();
 			label = new Label();
-			towardCar2 = new PictureBox();
-			towardCar1 = new PictureBox();
-			towardCar3 = new PictureBox();
-			Coin3 = new PictureBox();
-			Coin2 = new PictureBox();
-			Coin1 = new PictureBox();
-			buttonPause = new Button();
+			oncomingСar2 = new PictureBox();
+			oncomingCar1 = new PictureBox();
+			oncomingCar3 = new PictureBox();
+			coin3 = new PictureBox();
+			coin2 = new PictureBox();
+			coin1 = new PictureBox();
+			pauseButton = new Button();
 			mainCar = new PictureBox();
-			LaneTwo5 = new Label();
-			LaneTwo4 = new Label();
-			LaneTwo3 = new Label();
-			LaneTwo2 = new Label();
-			LaneTwo1 = new Label();
-			LaneOne5 = new Label();
-			LaneOne4 = new Label();
-			LaneOne3 = new Label();
-			LaneOne2 = new Label();
-			LaneOne1 = new Label();
-			MiddleLane = new Label();
-			timerTowardCars = new System.Windows.Forms.Timer(components);
-			timerMenu = new System.Windows.Forms.Timer(components);
-			panelGame.SuspendLayout();
-			panelMenu.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)CarMenu1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)CarMenu3).BeginInit();
-			((System.ComponentModel.ISupportInitialize)CarMenu2).BeginInit();
-			panelPause.SuspendLayout();
+			secondLane5 = new Label();
+			secondLane4 = new Label();
+			secondLane3 = new Label();
+			secondLane2 = new Label();
+			secondLane1 = new Label();
+			firstLane5 = new Label();
+			firstLane4 = new Label();
+			firstLane3 = new Label();
+			firstLane2 = new Label();
+			firstLane1 = new Label();
+			middleLane = new Label();
+			oncomingCarsTimer = new System.Windows.Forms.Timer(components);
+			menuTimer = new System.Windows.Forms.Timer(components);
+			gamePanel.SuspendLayout();
+			menuPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)carMenu1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)carMenu3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)carMenu2).BeginInit();
+			pausePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureFlag).BeginInit();
-			((System.ComponentModel.ISupportInitialize)towardCar2).BeginInit();
-			((System.ComponentModel.ISupportInitialize)towardCar1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)towardCar3).BeginInit();
-			((System.ComponentModel.ISupportInitialize)Coin3).BeginInit();
-			((System.ComponentModel.ISupportInitialize)Coin2).BeginInit();
-			((System.ComponentModel.ISupportInitialize)Coin1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)oncomingСar2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)oncomingCar1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)oncomingCar3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)coin3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)coin2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)coin1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mainCar).BeginInit();
 			SuspendLayout();
 			// 
 			// timerRoad
 			// 
-			timerRoad.Enabled = true;
-			timerRoad.Interval = 1;
-			timerRoad.Tick += timerRoad_Tick;
+			roadTimer.Enabled = true;
+			roadTimer.Interval = 1;
+			roadTimer.Tick += RoadTimer_Tick;
 			// 
-			// panelGame
+			// gamePanel
 			// 
-			panelGame.BackColor = SystemColors.ControlDarkDark;
-			panelGame.Controls.Add(panelPause);
-			panelGame.Controls.Add(labelScore);
-			panelGame.Controls.Add(labelCoins);
-			panelGame.Controls.Add(label);
-			panelGame.Controls.Add(towardCar2);
-			panelGame.Controls.Add(towardCar1);
-			panelGame.Controls.Add(towardCar3);
-			panelGame.Controls.Add(Coin3);
-			panelGame.Controls.Add(Coin2);
-			panelGame.Controls.Add(Coin1);
-			panelGame.Controls.Add(buttonPause);
-			panelGame.Controls.Add(mainCar);
-			panelGame.Controls.Add(LaneTwo5);
-			panelGame.Controls.Add(LaneTwo4);
-			panelGame.Controls.Add(LaneTwo3);
-			panelGame.Controls.Add(LaneTwo2);
-			panelGame.Controls.Add(LaneTwo1);
-			panelGame.Controls.Add(LaneOne5);
-			panelGame.Controls.Add(LaneOne4);
-			panelGame.Controls.Add(LaneOne3);
-			panelGame.Controls.Add(LaneOne2);
-			panelGame.Controls.Add(LaneOne1);
-			panelGame.Controls.Add(MiddleLane);
-			panelGame.Location = new Point(0, 0);
-			panelGame.Margin = new Padding(4, 5, 4, 5);
-			panelGame.Name = "panelGame";
-			panelGame.Size = new Size(512, 866);
-			panelGame.TabIndex = 0;
+			gamePanel.BackColor = SystemColors.ControlDarkDark;
+			gamePanel.Controls.Add(pausePanel);
+			gamePanel.Controls.Add(scoreLabel);
+			gamePanel.Controls.Add(coinsLabel);
+			gamePanel.Controls.Add(label);
+			gamePanel.Controls.Add(oncomingСar2);
+			gamePanel.Controls.Add(oncomingCar1);
+			gamePanel.Controls.Add(oncomingCar3);
+			gamePanel.Controls.Add(coin3);
+			gamePanel.Controls.Add(coin2);
+			gamePanel.Controls.Add(coin1);
+			gamePanel.Controls.Add(pauseButton);
+			gamePanel.Controls.Add(mainCar);
+			gamePanel.Controls.Add(secondLane5);
+			gamePanel.Controls.Add(secondLane4);
+			gamePanel.Controls.Add(secondLane3);
+			gamePanel.Controls.Add(secondLane2);
+			gamePanel.Controls.Add(secondLane1);
+			gamePanel.Controls.Add(firstLane5);
+			gamePanel.Controls.Add(firstLane4);
+			gamePanel.Controls.Add(firstLane3);
+			gamePanel.Controls.Add(firstLane2);
+			gamePanel.Controls.Add(firstLane1);
+			gamePanel.Controls.Add(middleLane);
+			gamePanel.Location = new Point(0, 0);
+			gamePanel.Margin = new Padding(4, 5, 4, 5);
+			gamePanel.Name = "panelGame";
+			gamePanel.Size = new Size(512, 866);
+			gamePanel.TabIndex = 0;
 			// 
-			// panelMenu
+			// menuPanel
 			// 
-			panelMenu.BackColor = SystemColors.ControlDarkDark;
-			panelMenu.Controls.Add(buttonHelp);
-			panelMenu.Controls.Add(buttonMenuExit);
-			panelMenu.Controls.Add(buttonStart);
-			panelMenu.Controls.Add(label3);
-			panelMenu.Controls.Add(CarMenu1);
-			panelMenu.Controls.Add(CarMenu3);
-			panelMenu.Controls.Add(CarMenu2);
-			panelMenu.Controls.Add(MenuTwoLane5);
-			panelMenu.Controls.Add(MenuTwoLane4);
-			panelMenu.Controls.Add(MenuTwoLane3);
-			panelMenu.Controls.Add(MenuTwoLane2);
-			panelMenu.Controls.Add(MenuTwoLane1);
-			panelMenu.Controls.Add(MenuOneLane5);
-			panelMenu.Controls.Add(MenuOneLane4);
-			panelMenu.Controls.Add(MenuOneLane3);
-			panelMenu.Controls.Add(MenuOneLane2);
-			panelMenu.Controls.Add(MenuOneLane1);
-			panelMenu.Controls.Add(label12);
-			panelMenu.Location = new Point(0, 0);
-			panelMenu.Margin = new Padding(4, 5, 4, 5);
-			panelMenu.Name = "panelMenu";
-			panelMenu.Size = new Size(515, 867);
-			panelMenu.TabIndex = 57;
-			// 
-			// buttonHelp
-			// 
-			buttonHelp.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonHelp.Location = new Point(413, 812);
-			buttonHelp.Margin = new Padding(4, 5, 4, 5);
-			buttonHelp.Name = "buttonHelp";
-			buttonHelp.Size = new Size(93, 49);
-			buttonHelp.TabIndex = 82;
-			buttonHelp.Text = "Help";
-			buttonHelp.UseVisualStyleBackColor = true;
-			buttonHelp.Click += buttonHelp_Click;
-			// 
-			// buttonMenuExit
-			// 
-			buttonMenuExit.Font = new Font("Microsoft YaHei", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonMenuExit.Location = new Point(167, 506);
-			buttonMenuExit.Margin = new Padding(4, 5, 4, 5);
-			buttonMenuExit.Name = "buttonMenuExit";
-			buttonMenuExit.Size = new Size(176, 72);
-			buttonMenuExit.TabIndex = 67;
-			buttonMenuExit.Text = "Exit";
-			buttonMenuExit.UseVisualStyleBackColor = true;
-			buttonMenuExit.Click += buttonMenuExit_Click;
-			// 
-			// buttonStart
-			// 
-			buttonStart.Font = new Font("Microsoft YaHei", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonStart.Location = new Point(148, 405);
-			buttonStart.Margin = new Padding(4, 5, 4, 5);
-			buttonStart.Name = "buttonStart";
-			buttonStart.Size = new Size(213, 91);
-			buttonStart.TabIndex = 65;
-			buttonStart.Text = "Start";
-			buttonStart.UseVisualStyleBackColor = true;
-			buttonStart.Click += buttonStart_Click;
+			menuPanel.BackColor = SystemColors.ControlDarkDark;
+			menuPanel.Controls.Add(helpButton);
+			menuPanel.Controls.Add(menuExitButton);
+			menuPanel.Controls.Add(startButton);
+			menuPanel.Controls.Add(label3);
+			menuPanel.Controls.Add(carMenu1);
+			menuPanel.Controls.Add(carMenu3);
+			menuPanel.Controls.Add(carMenu2);
+			menuPanel.Controls.Add(secondLaneMenu5);
+			menuPanel.Controls.Add(secondLaneMenu4);
+			menuPanel.Controls.Add(secondLaneMenu3);
+			menuPanel.Controls.Add(secondLaneMenu2);
+			menuPanel.Controls.Add(secondLaneMenu1);
+			menuPanel.Controls.Add(firstLaneMenu5);
+			menuPanel.Controls.Add(firstLaneMenu4);
+			menuPanel.Controls.Add(firstLaneMenu3);
+			menuPanel.Controls.Add(firstLaneMenu2);
+			menuPanel.Controls.Add(firstLaneMenu1);
+			menuPanel.Controls.Add(label12);
+			menuPanel.Location = new Point(0, 0);
+			menuPanel.Margin = new Padding(4, 5, 4, 5);
+			menuPanel.Name = "panelMenu";
+			menuPanel.Size = new Size(515, 867);
+			menuPanel.TabIndex = 57;
+            // 
+            // helpButton
+            // 
+            helpButton.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point);
+			helpButton.Location = new Point(413, 812);
+			helpButton.Margin = new Padding(4, 5, 4, 5);
+			helpButton.Name = "buttonHelp";
+			helpButton.Size = new Size(93, 49);
+			helpButton.TabIndex = 82;
+			helpButton.Text = "Help";
+			helpButton.UseVisualStyleBackColor = true;
+			helpButton.Click += buttonHelp_Click;
+            // 
+            // menuExitButton
+            // 
+            menuExitButton.Font = new Font("Microsoft YaHei", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+			menuExitButton.Location = new Point(167, 506);
+			menuExitButton.Margin = new Padding(4, 5, 4, 5);
+			menuExitButton.Name = "buttonMenuExit";
+			menuExitButton.Size = new Size(176, 72);
+			menuExitButton.TabIndex = 67;
+			menuExitButton.Text = "Exit";
+			menuExitButton.UseVisualStyleBackColor = true;
+			menuExitButton.Click += buttonMenuExit_Click;
+            // 
+            // startButton
+            // 
+            startButton.Font = new Font("Microsoft YaHei", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+			startButton.Location = new Point(148, 405);
+			startButton.Margin = new Padding(4, 5, 4, 5);
+			startButton.Name = "buttonStart";
+			startButton.Size = new Size(213, 91);
+			startButton.TabIndex = 65;
+			startButton.Text = "Start";
+			startButton.UseVisualStyleBackColor = true;
+			startButton.Click += buttonStart_Click;
 			// 
 			// label3
 			// 
@@ -210,151 +210,151 @@
 			label3.TabIndex = 66;
 			label3.Text = "Race";
 			// 
-			// CarMenu1
+			// carMenu1
 			// 
-			CarMenu1.BackColor = Color.Transparent;
-			CarMenu1.Image = (Image)resources.GetObject("CarMenu1.Image");
-			CarMenu1.Location = new Point(16, 20);
-			CarMenu1.Margin = new Padding(4, 5, 4, 5);
-			CarMenu1.Name = "CarMenu1";
-			CarMenu1.Size = new Size(67, 169);
-			CarMenu1.SizeMode = PictureBoxSizeMode.Zoom;
-			CarMenu1.TabIndex = 80;
-			CarMenu1.TabStop = false;
+			carMenu1.BackColor = Color.Transparent;
+			carMenu1.Image = (Image)resources.GetObject("CarMenu1.Image");
+			carMenu1.Location = new Point(16, 20);
+			carMenu1.Margin = new Padding(4, 5, 4, 5);
+			carMenu1.Name = "CarMenu1";
+			carMenu1.Size = new Size(67, 169);
+			carMenu1.SizeMode = PictureBoxSizeMode.Zoom;
+			carMenu1.TabIndex = 80;
+			carMenu1.TabStop = false;
 			// 
-			// CarMenu3
+			// carMenu3
 			// 
-			CarMenu3.BackColor = Color.Transparent;
-			CarMenu3.Image = (Image)resources.GetObject("CarMenu3.Image");
-			CarMenu3.Location = new Point(429, 40);
-			CarMenu3.Margin = new Padding(4, 5, 4, 5);
-			CarMenu3.Name = "CarMenu3";
-			CarMenu3.Size = new Size(67, 169);
-			CarMenu3.SizeMode = PictureBoxSizeMode.Zoom;
-			CarMenu3.TabIndex = 81;
-			CarMenu3.TabStop = false;
+			carMenu3.BackColor = Color.Transparent;
+			carMenu3.Image = (Image)resources.GetObject("CarMenu3.Image");
+			carMenu3.Location = new Point(429, 40);
+			carMenu3.Margin = new Padding(4, 5, 4, 5);
+			carMenu3.Name = "CarMenu3";
+			carMenu3.Size = new Size(67, 169);
+			carMenu3.SizeMode = PictureBoxSizeMode.Zoom;
+			carMenu3.TabIndex = 81;
+			carMenu3.TabStop = false;
 			// 
-			// CarMenu2
+			// carMenu2
 			// 
-			CarMenu2.BackColor = Color.Transparent;
-			CarMenu2.Image = (Image)resources.GetObject("CarMenu2.Image");
-			CarMenu2.Location = new Point(172, 5);
-			CarMenu2.Margin = new Padding(4, 5, 4, 5);
-			CarMenu2.Name = "CarMenu2";
-			CarMenu2.Size = new Size(67, 169);
-			CarMenu2.SizeMode = PictureBoxSizeMode.Zoom;
-			CarMenu2.TabIndex = 79;
-			CarMenu2.TabStop = false;
-			// 
-			// MenuTwoLane5
-			// 
-			MenuTwoLane5.BackColor = Color.White;
-			MenuTwoLane5.ForeColor = SystemColors.Control;
-			MenuTwoLane5.Location = new Point(385, 797);
-			MenuTwoLane5.Margin = new Padding(4, 0, 4, 0);
-			MenuTwoLane5.Name = "MenuTwoLane5";
-			MenuTwoLane5.Size = new Size(20, 138);
-			MenuTwoLane5.TabIndex = 78;
-			MenuTwoLane5.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuTwoLane4
-			// 
-			MenuTwoLane4.BackColor = Color.White;
-			MenuTwoLane4.ForeColor = SystemColors.Control;
-			MenuTwoLane4.Location = new Point(385, 582);
-			MenuTwoLane4.Margin = new Padding(4, 0, 4, 0);
-			MenuTwoLane4.Name = "MenuTwoLane4";
-			MenuTwoLane4.Size = new Size(20, 138);
-			MenuTwoLane4.TabIndex = 77;
-			MenuTwoLane4.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuTwoLane3
-			// 
-			MenuTwoLane3.BackColor = Color.White;
-			MenuTwoLane3.ForeColor = SystemColors.Control;
-			MenuTwoLane3.Location = new Point(385, 366);
-			MenuTwoLane3.Margin = new Padding(4, 0, 4, 0);
-			MenuTwoLane3.Name = "MenuTwoLane3";
-			MenuTwoLane3.Size = new Size(20, 138);
-			MenuTwoLane3.TabIndex = 76;
-			MenuTwoLane3.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuTwoLane2
-			// 
-			MenuTwoLane2.BackColor = Color.White;
-			MenuTwoLane2.ForeColor = SystemColors.Control;
-			MenuTwoLane2.Location = new Point(385, 151);
-			MenuTwoLane2.Margin = new Padding(4, 0, 4, 0);
-			MenuTwoLane2.Name = "MenuTwoLane2";
-			MenuTwoLane2.Size = new Size(20, 138);
-			MenuTwoLane2.TabIndex = 75;
-			MenuTwoLane2.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuTwoLane1
-			// 
-			MenuTwoLane1.BackColor = Color.White;
-			MenuTwoLane1.ForeColor = SystemColors.Control;
-			MenuTwoLane1.Location = new Point(385, -65);
-			MenuTwoLane1.Margin = new Padding(4, 0, 4, 0);
-			MenuTwoLane1.Name = "MenuTwoLane1";
-			MenuTwoLane1.Size = new Size(20, 138);
-			MenuTwoLane1.TabIndex = 74;
-			MenuTwoLane1.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuOneLane5
-			// 
-			MenuOneLane5.BackColor = Color.White;
-			MenuOneLane5.ForeColor = SystemColors.Control;
-			MenuOneLane5.Location = new Point(119, 797);
-			MenuOneLane5.Margin = new Padding(4, 0, 4, 0);
-			MenuOneLane5.Name = "MenuOneLane5";
-			MenuOneLane5.Size = new Size(20, 138);
-			MenuOneLane5.TabIndex = 73;
-			MenuOneLane5.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuOneLane4
-			// 
-			MenuOneLane4.BackColor = Color.White;
-			MenuOneLane4.ForeColor = SystemColors.Control;
-			MenuOneLane4.Location = new Point(119, 582);
-			MenuOneLane4.Margin = new Padding(4, 0, 4, 0);
-			MenuOneLane4.Name = "MenuOneLane4";
-			MenuOneLane4.Size = new Size(20, 138);
-			MenuOneLane4.TabIndex = 72;
-			MenuOneLane4.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuOneLane3
-			// 
-			MenuOneLane3.BackColor = Color.White;
-			MenuOneLane3.ForeColor = SystemColors.Control;
-			MenuOneLane3.Location = new Point(119, 366);
-			MenuOneLane3.Margin = new Padding(4, 0, 4, 0);
-			MenuOneLane3.Name = "MenuOneLane3";
-			MenuOneLane3.Size = new Size(20, 138);
-			MenuOneLane3.TabIndex = 71;
-			MenuOneLane3.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuOneLane2
-			// 
-			MenuOneLane2.BackColor = Color.White;
-			MenuOneLane2.ForeColor = SystemColors.Control;
-			MenuOneLane2.Location = new Point(119, 151);
-			MenuOneLane2.Margin = new Padding(4, 0, 4, 0);
-			MenuOneLane2.Name = "MenuOneLane2";
-			MenuOneLane2.Size = new Size(20, 138);
-			MenuOneLane2.TabIndex = 70;
-			MenuOneLane2.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MenuOneLane1
-			// 
-			MenuOneLane1.BackColor = Color.White;
-			MenuOneLane1.ForeColor = SystemColors.Control;
-			MenuOneLane1.Location = new Point(119, -65);
-			MenuOneLane1.Margin = new Padding(4, 0, 4, 0);
-			MenuOneLane1.Name = "MenuOneLane1";
-			MenuOneLane1.Size = new Size(20, 138);
-			MenuOneLane1.TabIndex = 69;
-			MenuOneLane1.TextAlign = ContentAlignment.TopCenter;
+			carMenu2.BackColor = Color.Transparent;
+			carMenu2.Image = (Image)resources.GetObject("CarMenu2.Image");
+			carMenu2.Location = new Point(172, 5);
+			carMenu2.Margin = new Padding(4, 5, 4, 5);
+			carMenu2.Name = "CarMenu2";
+			carMenu2.Size = new Size(67, 169);
+			carMenu2.SizeMode = PictureBoxSizeMode.Zoom;
+			carMenu2.TabIndex = 79;
+			carMenu2.TabStop = false;
+            // 
+            // secondLaneMenu5
+            // 
+            secondLaneMenu5.BackColor = Color.White;
+			secondLaneMenu5.ForeColor = SystemColors.Control;
+			secondLaneMenu5.Location = new Point(385, 797);
+			secondLaneMenu5.Margin = new Padding(4, 0, 4, 0);
+			secondLaneMenu5.Name = "MenuTwoLane5";
+			secondLaneMenu5.Size = new Size(20, 138);
+			secondLaneMenu5.TabIndex = 78;
+			secondLaneMenu5.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLaneMenu4
+            // 
+            secondLaneMenu4.BackColor = Color.White;
+			secondLaneMenu4.ForeColor = SystemColors.Control;
+			secondLaneMenu4.Location = new Point(385, 582);
+			secondLaneMenu4.Margin = new Padding(4, 0, 4, 0);
+			secondLaneMenu4.Name = "MenuTwoLane4";
+			secondLaneMenu4.Size = new Size(20, 138);
+			secondLaneMenu4.TabIndex = 77;
+			secondLaneMenu4.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLaneMenu3
+            // 
+            secondLaneMenu3.BackColor = Color.White;
+			secondLaneMenu3.ForeColor = SystemColors.Control;
+			secondLaneMenu3.Location = new Point(385, 366);
+			secondLaneMenu3.Margin = new Padding(4, 0, 4, 0);
+			secondLaneMenu3.Name = "MenuTwoLane3";
+			secondLaneMenu3.Size = new Size(20, 138);
+			secondLaneMenu3.TabIndex = 76;
+			secondLaneMenu3.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLaneMenu2
+            // 
+            secondLaneMenu2.BackColor = Color.White;
+			secondLaneMenu2.ForeColor = SystemColors.Control;
+			secondLaneMenu2.Location = new Point(385, 151);
+			secondLaneMenu2.Margin = new Padding(4, 0, 4, 0);
+			secondLaneMenu2.Name = "MenuTwoLane2";
+			secondLaneMenu2.Size = new Size(20, 138);
+			secondLaneMenu2.TabIndex = 75;
+			secondLaneMenu2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLaneMenu1
+            // 
+            secondLaneMenu1.BackColor = Color.White;
+			secondLaneMenu1.ForeColor = SystemColors.Control;
+			secondLaneMenu1.Location = new Point(385, -65);
+			secondLaneMenu1.Margin = new Padding(4, 0, 4, 0);
+			secondLaneMenu1.Name = "MenuTwoLane1";
+			secondLaneMenu1.Size = new Size(20, 138);
+			secondLaneMenu1.TabIndex = 74;
+			secondLaneMenu1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLaneMenu5
+            // 
+            firstLaneMenu5.BackColor = Color.White;
+			firstLaneMenu5.ForeColor = SystemColors.Control;
+			firstLaneMenu5.Location = new Point(119, 797);
+			firstLaneMenu5.Margin = new Padding(4, 0, 4, 0);
+			firstLaneMenu5.Name = "MenuOneLane5";
+			firstLaneMenu5.Size = new Size(20, 138);
+			firstLaneMenu5.TabIndex = 73;
+			firstLaneMenu5.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLaneMenu4
+            // 
+            firstLaneMenu4.BackColor = Color.White;
+			firstLaneMenu4.ForeColor = SystemColors.Control;
+			firstLaneMenu4.Location = new Point(119, 582);
+			firstLaneMenu4.Margin = new Padding(4, 0, 4, 0);
+			firstLaneMenu4.Name = "MenuOneLane4";
+			firstLaneMenu4.Size = new Size(20, 138);
+			firstLaneMenu4.TabIndex = 72;
+			firstLaneMenu4.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLaneMenu3
+            // 
+            firstLaneMenu3.BackColor = Color.White;
+			firstLaneMenu3.ForeColor = SystemColors.Control;
+			firstLaneMenu3.Location = new Point(119, 366);
+			firstLaneMenu3.Margin = new Padding(4, 0, 4, 0);
+			firstLaneMenu3.Name = "MenuOneLane3";
+			firstLaneMenu3.Size = new Size(20, 138);
+			firstLaneMenu3.TabIndex = 71;
+			firstLaneMenu3.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLaneMenu2
+            // 
+            firstLaneMenu2.BackColor = Color.White;
+			firstLaneMenu2.ForeColor = SystemColors.Control;
+			firstLaneMenu2.Location = new Point(119, 151);
+			firstLaneMenu2.Margin = new Padding(4, 0, 4, 0);
+			firstLaneMenu2.Name = "MenuOneLane2";
+			firstLaneMenu2.Size = new Size(20, 138);
+			firstLaneMenu2.TabIndex = 70;
+			firstLaneMenu2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLaneMenu1
+            // 
+            firstLaneMenu1.BackColor = Color.White;
+			firstLaneMenu1.ForeColor = SystemColors.Control;
+			firstLaneMenu1.Location = new Point(119, -65);
+			firstLaneMenu1.Margin = new Padding(4, 0, 4, 0);
+			firstLaneMenu1.Name = "MenuOneLane1";
+			firstLaneMenu1.Size = new Size(20, 138);
+			firstLaneMenu1.TabIndex = 69;
+			firstLaneMenu1.TextAlign = ContentAlignment.TopCenter;
 			// 
 			// label12
 			// 
@@ -366,44 +366,44 @@
 			label12.Size = new Size(23, 872);
 			label12.TabIndex = 68;
 			label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pausePanel
+            // 
+            pausePanel.BackColor = SystemColors.ControlDarkDark;
+			pausePanel.Controls.Add(menuPanel);
+			pausePanel.Controls.Add(exitButton);
+			pausePanel.Controls.Add(resumeButton);
+			pausePanel.Controls.Add(pictureFlag);
+			pausePanel.Controls.Add(pauseLabel);
+			pausePanel.Location = new Point(0, 0);
+			pausePanel.Margin = new Padding(4, 5, 4, 5);
+			pausePanel.Name = "panelPause";
+			pausePanel.Size = new Size(515, 872);
+			pausePanel.TabIndex = 57;
 			// 
-			// panelPause
+			// exitButton
 			// 
-			panelPause.BackColor = SystemColors.ControlDarkDark;
-			panelPause.Controls.Add(panelMenu);
-			panelPause.Controls.Add(buttonExit);
-			panelPause.Controls.Add(buttonResume);
-			panelPause.Controls.Add(pictureFlag);
-			panelPause.Controls.Add(labelPause);
-			panelPause.Location = new Point(0, 0);
-			panelPause.Margin = new Padding(4, 5, 4, 5);
-			panelPause.Name = "panelPause";
-			panelPause.Size = new Size(515, 872);
-			panelPause.TabIndex = 57;
+			exitButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			exitButton.Location = new Point(159, 740);
+			exitButton.Margin = new Padding(4, 5, 4, 5);
+			exitButton.Name = "buttonExit";
+			exitButton.Size = new Size(203, 62);
+			exitButton.TabIndex = 53;
+			exitButton.Text = "Exit";
+			exitButton.UseVisualStyleBackColor = true;
+			exitButton.Click += buttonExit_Click;
 			// 
-			// buttonExit
+			// resumeButton
 			// 
-			buttonExit.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonExit.Location = new Point(159, 740);
-			buttonExit.Margin = new Padding(4, 5, 4, 5);
-			buttonExit.Name = "buttonExit";
-			buttonExit.Size = new Size(203, 62);
-			buttonExit.TabIndex = 53;
-			buttonExit.Text = "Exit";
-			buttonExit.UseVisualStyleBackColor = true;
-			buttonExit.Click += buttonExit_Click;
-			// 
-			// buttonResume
-			// 
-			buttonResume.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonResume.Location = new Point(159, 625);
-			buttonResume.Margin = new Padding(4, 5, 4, 5);
-			buttonResume.Name = "buttonResume";
-			buttonResume.Size = new Size(203, 89);
-			buttonResume.TabIndex = 52;
-			buttonResume.Text = "Resume";
-			buttonResume.UseVisualStyleBackColor = true;
-			buttonResume.Click += buttonResume_Click;
+			resumeButton.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
+			resumeButton.Location = new Point(159, 625);
+			resumeButton.Margin = new Padding(4, 5, 4, 5);
+			resumeButton.Name = "buttonResume";
+			resumeButton.Size = new Size(203, 89);
+			resumeButton.TabIndex = 52;
+			resumeButton.Text = "Resume";
+			resumeButton.UseVisualStyleBackColor = true;
+			resumeButton.Click += buttonResume_Click;
 			// 
 			// pictureFlag
 			// 
@@ -416,43 +416,43 @@
 			pictureFlag.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureFlag.TabIndex = 55;
 			pictureFlag.TabStop = false;
-			// 
-			// labelPause
-			// 
-			labelPause.AutoSize = true;
-			labelPause.Font = new Font("Microsoft YaHei", 90F, FontStyle.Bold, GraphicsUnit.Point);
-			labelPause.Location = new Point(0, 0);
-			labelPause.Margin = new Padding(4, 0, 4, 0);
-			labelPause.Name = "labelPause";
-			labelPause.Size = new Size(528, 199);
-			labelPause.TabIndex = 54;
-			labelPause.Text = "Pause";
-			// 
-			// labelScore
-			// 
-			labelScore.AutoSize = true;
-			labelScore.BackColor = Color.Black;
-			labelScore.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
-			labelScore.ForeColor = SystemColors.ButtonHighlight;
-			labelScore.Location = new Point(16, 14);
-			labelScore.Margin = new Padding(4, 0, 4, 0);
-			labelScore.Name = "labelScore";
-			labelScore.Size = new Size(136, 50);
-			labelScore.TabIndex = 56;
-			labelScore.Text = "Score:";
-			// 
-			// labelCoins
-			// 
-			labelCoins.AutoSize = true;
-			labelCoins.BackColor = Color.Black;
-			labelCoins.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
-			labelCoins.ForeColor = SystemColors.ButtonHighlight;
-			labelCoins.Location = new Point(276, 14);
-			labelCoins.Margin = new Padding(4, 0, 4, 0);
-			labelCoins.Name = "labelCoins";
-			labelCoins.Size = new Size(135, 50);
-			labelCoins.TabIndex = 57;
-			labelCoins.Text = "Coins:";
+            // 
+            // pauseLabel
+            // 
+            pauseLabel.AutoSize = true;
+			pauseLabel.Font = new Font("Microsoft YaHei", 90F, FontStyle.Bold, GraphicsUnit.Point);
+			pauseLabel.Location = new Point(0, 0);
+			pauseLabel.Margin = new Padding(4, 0, 4, 0);
+			pauseLabel.Name = "labelPause";
+			pauseLabel.Size = new Size(528, 199);
+			pauseLabel.TabIndex = 54;
+			pauseLabel.Text = "Pause";
+            // 
+            // scoreLabel
+            // 
+            scoreLabel.AutoSize = true;
+			scoreLabel.BackColor = Color.Black;
+			scoreLabel.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
+			scoreLabel.ForeColor = SystemColors.ButtonHighlight;
+			scoreLabel.Location = new Point(16, 14);
+			scoreLabel.Margin = new Padding(4, 0, 4, 0);
+			scoreLabel.Name = "labelScore";
+			scoreLabel.Size = new Size(136, 50);
+			scoreLabel.TabIndex = 56;
+			scoreLabel.Text = "Score:";
+            // 
+            // coinsLabel
+            // 
+            coinsLabel.AutoSize = true;
+			coinsLabel.BackColor = Color.Black;
+			coinsLabel.Font = new Font("Microsoft YaHei", 22F, FontStyle.Bold, GraphicsUnit.Point);
+			coinsLabel.ForeColor = SystemColors.ButtonHighlight;
+			coinsLabel.Location = new Point(276, 14);
+			coinsLabel.Margin = new Padding(4, 0, 4, 0);
+			coinsLabel.Name = "labelCoins";
+			coinsLabel.Size = new Size(135, 50);
+			coinsLabel.TabIndex = 57;
+			coinsLabel.Text = "Coins:";
 			// 
 			// label
 			// 
@@ -465,90 +465,90 @@
 			label.Name = "label";
 			label.Size = new Size(515, 91);
 			label.TabIndex = 55;
+            // 
+            // oncomingСar2
+            // 
+            oncomingСar2.BackColor = Color.Transparent;
+			oncomingСar2.Image = (Image)resources.GetObject("towardCar2.Image");
+			oncomingСar2.Location = new Point(16, 35);
+			oncomingСar2.Margin = new Padding(4, 5, 4, 5);
+			oncomingСar2.Name = "towardCar2";
+			oncomingСar2.Size = new Size(67, 169);
+			oncomingСar2.SizeMode = PictureBoxSizeMode.Zoom;
+			oncomingСar2.TabIndex = 49;
+			oncomingСar2.TabStop = false;
+            // 
+            // oncomingCar1
+            // 
+            oncomingCar1.BackColor = Color.Transparent;
+			oncomingCar1.Image = (Image)resources.GetObject("towardCar1.Image");
+			oncomingCar1.Location = new Point(172, 20);
+			oncomingCar1.Margin = new Padding(4, 5, 4, 5);
+			oncomingCar1.Name = "towardCar1";
+			oncomingCar1.Size = new Size(67, 169);
+			oncomingCar1.SizeMode = PictureBoxSizeMode.Zoom;
+			oncomingCar1.TabIndex = 48;
+			oncomingCar1.TabStop = false;
+            // 
+            // oncomingCar3
+            // 
+            oncomingCar3.BackColor = Color.Transparent;
+			oncomingCar3.Image = (Image)resources.GetObject("towardCar3.Image");
+			oncomingCar3.Location = new Point(429, 55);
+			oncomingCar3.Margin = new Padding(4, 5, 4, 5);
+			oncomingCar3.Name = "towardCar3";
+			oncomingCar3.Size = new Size(67, 169);
+			oncomingCar3.SizeMode = PictureBoxSizeMode.Zoom;
+			oncomingCar3.TabIndex = 50;
+			oncomingCar3.TabStop = false;
 			// 
-			// towardCar2
+			// coin3
 			// 
-			towardCar2.BackColor = Color.Transparent;
-			towardCar2.Image = (Image)resources.GetObject("towardCar2.Image");
-			towardCar2.Location = new Point(16, 35);
-			towardCar2.Margin = new Padding(4, 5, 4, 5);
-			towardCar2.Name = "towardCar2";
-			towardCar2.Size = new Size(67, 169);
-			towardCar2.SizeMode = PictureBoxSizeMode.Zoom;
-			towardCar2.TabIndex = 49;
-			towardCar2.TabStop = false;
+			coin3.BackColor = Color.Transparent;
+			coin3.Image = (Image)resources.GetObject("Coin3.Image");
+			coin3.Location = new Point(429, 343);
+			coin3.Margin = new Padding(4, 5, 4, 5);
+			coin3.Name = "Coin3";
+			coin3.Size = new Size(45, 49);
+			coin3.SizeMode = PictureBoxSizeMode.Zoom;
+			coin3.TabIndex = 54;
+			coin3.TabStop = false;
 			// 
-			// towardCar1
+			// coin2
 			// 
-			towardCar1.BackColor = Color.Transparent;
-			towardCar1.Image = (Image)resources.GetObject("towardCar1.Image");
-			towardCar1.Location = new Point(172, 20);
-			towardCar1.Margin = new Padding(4, 5, 4, 5);
-			towardCar1.Name = "towardCar1";
-			towardCar1.Size = new Size(67, 169);
-			towardCar1.SizeMode = PictureBoxSizeMode.Zoom;
-			towardCar1.TabIndex = 48;
-			towardCar1.TabStop = false;
+			coin2.BackColor = Color.Transparent;
+			coin2.Image = (Image)resources.GetObject("Coin2.Image");
+			coin2.Location = new Point(295, 240);
+			coin2.Margin = new Padding(4, 5, 4, 5);
+			coin2.Name = "Coin2";
+			coin2.Size = new Size(45, 49);
+			coin2.SizeMode = PictureBoxSizeMode.Zoom;
+			coin2.TabIndex = 53;
+			coin2.TabStop = false;
 			// 
-			// towardCar3
+			// coin1
 			// 
-			towardCar3.BackColor = Color.Transparent;
-			towardCar3.Image = (Image)resources.GetObject("towardCar3.Image");
-			towardCar3.Location = new Point(429, 55);
-			towardCar3.Margin = new Padding(4, 5, 4, 5);
-			towardCar3.Name = "towardCar3";
-			towardCar3.Size = new Size(67, 169);
-			towardCar3.SizeMode = PictureBoxSizeMode.Zoom;
-			towardCar3.TabIndex = 50;
-			towardCar3.TabStop = false;
-			// 
-			// Coin3
-			// 
-			Coin3.BackColor = Color.Transparent;
-			Coin3.Image = (Image)resources.GetObject("Coin3.Image");
-			Coin3.Location = new Point(429, 343);
-			Coin3.Margin = new Padding(4, 5, 4, 5);
-			Coin3.Name = "Coin3";
-			Coin3.Size = new Size(45, 49);
-			Coin3.SizeMode = PictureBoxSizeMode.Zoom;
-			Coin3.TabIndex = 54;
-			Coin3.TabStop = false;
-			// 
-			// Coin2
-			// 
-			Coin2.BackColor = Color.Transparent;
-			Coin2.Image = (Image)resources.GetObject("Coin2.Image");
-			Coin2.Location = new Point(295, 240);
-			Coin2.Margin = new Padding(4, 5, 4, 5);
-			Coin2.Name = "Coin2";
-			Coin2.Size = new Size(45, 49);
-			Coin2.SizeMode = PictureBoxSizeMode.Zoom;
-			Coin2.TabIndex = 53;
-			Coin2.TabStop = false;
-			// 
-			// Coin1
-			// 
-			Coin1.BackColor = Color.Transparent;
-			Coin1.Image = (Image)resources.GetObject("Coin1.Image");
-			Coin1.Location = new Point(147, 388);
-			Coin1.Margin = new Padding(4, 5, 4, 5);
-			Coin1.Name = "Coin1";
-			Coin1.Size = new Size(45, 49);
-			Coin1.SizeMode = PictureBoxSizeMode.Zoom;
-			Coin1.TabIndex = 52;
-			Coin1.TabStop = false;
-			// 
-			// buttonPause
-			// 
-			buttonPause.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			buttonPause.Location = new Point(0, 803);
-			buttonPause.Margin = new Padding(4, 5, 4, 5);
-			buttonPause.Name = "buttonPause";
-			buttonPause.Size = new Size(109, 58);
-			buttonPause.TabIndex = 1;
-			buttonPause.Text = "Pause";
-			buttonPause.UseVisualStyleBackColor = true;
-			buttonPause.Click += buttonPause_Click;
+			coin1.BackColor = Color.Transparent;
+			coin1.Image = (Image)resources.GetObject("Coin1.Image");
+			coin1.Location = new Point(147, 388);
+			coin1.Margin = new Padding(4, 5, 4, 5);
+			coin1.Name = "Coin1";
+			coin1.Size = new Size(45, 49);
+			coin1.SizeMode = PictureBoxSizeMode.Zoom;
+			coin1.TabIndex = 52;
+			coin1.TabStop = false;
+            // 
+            // pauseButton
+            // 
+            pauseButton.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			pauseButton.Location = new Point(0, 803);
+			pauseButton.Margin = new Padding(4, 5, 4, 5);
+			pauseButton.Name = "buttonPause";
+			pauseButton.Size = new Size(109, 58);
+			pauseButton.TabIndex = 1;
+			pauseButton.Text = "Pause";
+			pauseButton.UseVisualStyleBackColor = true;
+			pauseButton.Click += buttonPause_Click;
 			// 
 			// mainCar
 			// 
@@ -562,139 +562,139 @@
 			mainCar.SizeMode = PictureBoxSizeMode.Zoom;
 			mainCar.TabIndex = 47;
 			mainCar.TabStop = false;
-			// 
-			// LaneTwo5
-			// 
-			LaneTwo5.BackColor = Color.White;
-			LaneTwo5.ForeColor = SystemColors.Control;
-			LaneTwo5.Location = new Point(385, 812);
-			LaneTwo5.Margin = new Padding(4, 0, 4, 0);
-			LaneTwo5.Name = "LaneTwo5";
-			LaneTwo5.Size = new Size(20, 138);
-			LaneTwo5.TabIndex = 43;
-			LaneTwo5.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneTwo4
-			// 
-			LaneTwo4.BackColor = Color.White;
-			LaneTwo4.ForeColor = SystemColors.Control;
-			LaneTwo4.Location = new Point(385, 596);
-			LaneTwo4.Margin = new Padding(4, 0, 4, 0);
-			LaneTwo4.Name = "LaneTwo4";
-			LaneTwo4.Size = new Size(20, 138);
-			LaneTwo4.TabIndex = 42;
-			LaneTwo4.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneTwo3
-			// 
-			LaneTwo3.BackColor = Color.White;
-			LaneTwo3.ForeColor = SystemColors.Control;
-			LaneTwo3.Location = new Point(385, 382);
-			LaneTwo3.Margin = new Padding(4, 0, 4, 0);
-			LaneTwo3.Name = "LaneTwo3";
-			LaneTwo3.Size = new Size(20, 138);
-			LaneTwo3.TabIndex = 41;
-			LaneTwo3.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneTwo2
-			// 
-			LaneTwo2.BackColor = Color.White;
-			LaneTwo2.ForeColor = SystemColors.Control;
-			LaneTwo2.Location = new Point(385, 166);
-			LaneTwo2.Margin = new Padding(4, 0, 4, 0);
-			LaneTwo2.Name = "LaneTwo2";
-			LaneTwo2.Size = new Size(20, 138);
-			LaneTwo2.TabIndex = 40;
-			LaneTwo2.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneTwo1
-			// 
-			LaneTwo1.BackColor = Color.White;
-			LaneTwo1.ForeColor = SystemColors.Control;
-			LaneTwo1.Location = new Point(385, -49);
-			LaneTwo1.Margin = new Padding(4, 0, 4, 0);
-			LaneTwo1.Name = "LaneTwo1";
-			LaneTwo1.Size = new Size(20, 138);
-			LaneTwo1.TabIndex = 39;
-			LaneTwo1.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneOne5
-			// 
-			LaneOne5.BackColor = Color.White;
-			LaneOne5.ForeColor = SystemColors.Control;
-			LaneOne5.Location = new Point(119, 812);
-			LaneOne5.Margin = new Padding(4, 0, 4, 0);
-			LaneOne5.Name = "LaneOne5";
-			LaneOne5.Size = new Size(20, 138);
-			LaneOne5.TabIndex = 38;
-			LaneOne5.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneOne4
-			// 
-			LaneOne4.BackColor = Color.White;
-			LaneOne4.ForeColor = SystemColors.Control;
-			LaneOne4.Location = new Point(119, 597);
-			LaneOne4.Margin = new Padding(4, 0, 4, 0);
-			LaneOne4.Name = "LaneOne4";
-			LaneOne4.Size = new Size(20, 138);
-			LaneOne4.TabIndex = 37;
-			LaneOne4.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneOne3
-			// 
-			LaneOne3.BackColor = Color.White;
-			LaneOne3.ForeColor = SystemColors.Control;
-			LaneOne3.Location = new Point(119, 382);
-			LaneOne3.Margin = new Padding(4, 0, 4, 0);
-			LaneOne3.Name = "LaneOne3";
-			LaneOne3.Size = new Size(20, 138);
-			LaneOne3.TabIndex = 36;
-			LaneOne3.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneOne2
-			// 
-			LaneOne2.BackColor = Color.White;
-			LaneOne2.ForeColor = SystemColors.Control;
-			LaneOne2.Location = new Point(119, 166);
-			LaneOne2.Margin = new Padding(4, 0, 4, 0);
-			LaneOne2.Name = "LaneOne2";
-			LaneOne2.Size = new Size(20, 138);
-			LaneOne2.TabIndex = 35;
-			LaneOne2.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// LaneOne1
-			// 
-			LaneOne1.BackColor = Color.White;
-			LaneOne1.ForeColor = SystemColors.Control;
-			LaneOne1.Location = new Point(119, -49);
-			LaneOne1.Margin = new Padding(4, 0, 4, 0);
-			LaneOne1.Name = "LaneOne1";
-			LaneOne1.Size = new Size(20, 138);
-			LaneOne1.TabIndex = 34;
-			LaneOne1.TextAlign = ContentAlignment.TopCenter;
-			// 
-			// MiddleLane
-			// 
-			MiddleLane.BackColor = Color.White;
-			MiddleLane.ForeColor = SystemColors.Control;
-			MiddleLane.Location = new Point(245, -6);
-			MiddleLane.Margin = new Padding(4, 0, 4, 0);
-			MiddleLane.Name = "MiddleLane";
-			MiddleLane.Size = new Size(23, 872);
-			MiddleLane.TabIndex = 33;
-			MiddleLane.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// timerTowardCars
-			// 
-			timerTowardCars.Enabled = true;
-			timerTowardCars.Interval = 1;
-			timerTowardCars.Tick += timerTowardCars_Tick;
-			// 
-			// timerMenu
-			// 
-			timerMenu.Enabled = true;
-			timerMenu.Interval = 1;
-			timerMenu.Tick += timerMenu_Tick;
+            // 
+            // secondLane5
+            // 
+            secondLane5.BackColor = Color.White;
+			secondLane5.ForeColor = SystemColors.Control;
+			secondLane5.Location = new Point(385, 812);
+			secondLane5.Margin = new Padding(4, 0, 4, 0);
+			secondLane5.Name = "LaneTwo5";
+			secondLane5.Size = new Size(20, 138);
+			secondLane5.TabIndex = 43;
+			secondLane5.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLane4
+            // 
+            secondLane4.BackColor = Color.White;
+			secondLane4.ForeColor = SystemColors.Control;
+			secondLane4.Location = new Point(385, 596);
+			secondLane4.Margin = new Padding(4, 0, 4, 0);
+			secondLane4.Name = "LaneTwo4";
+			secondLane4.Size = new Size(20, 138);
+			secondLane4.TabIndex = 42;
+			secondLane4.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLane3
+            // 
+            secondLane3.BackColor = Color.White;
+			secondLane3.ForeColor = SystemColors.Control;
+			secondLane3.Location = new Point(385, 382);
+			secondLane3.Margin = new Padding(4, 0, 4, 0);
+			secondLane3.Name = "LaneTwo3";
+			secondLane3.Size = new Size(20, 138);
+			secondLane3.TabIndex = 41;
+			secondLane3.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLane2
+            // 
+            secondLane2.BackColor = Color.White;
+			secondLane2.ForeColor = SystemColors.Control;
+			secondLane2.Location = new Point(385, 166);
+			secondLane2.Margin = new Padding(4, 0, 4, 0);
+			secondLane2.Name = "LaneTwo2";
+			secondLane2.Size = new Size(20, 138);
+			secondLane2.TabIndex = 40;
+			secondLane2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // secondLane1
+            // 
+            secondLane1.BackColor = Color.White;
+			secondLane1.ForeColor = SystemColors.Control;
+			secondLane1.Location = new Point(385, -49);
+			secondLane1.Margin = new Padding(4, 0, 4, 0);
+			secondLane1.Name = "LaneTwo1";
+			secondLane1.Size = new Size(20, 138);
+			secondLane1.TabIndex = 39;
+			secondLane1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLane5
+            // 
+            firstLane5.BackColor = Color.White;
+			firstLane5.ForeColor = SystemColors.Control;
+			firstLane5.Location = new Point(119, 812);
+			firstLane5.Margin = new Padding(4, 0, 4, 0);
+			firstLane5.Name = "LaneOne5";
+			firstLane5.Size = new Size(20, 138);
+			firstLane5.TabIndex = 38;
+			firstLane5.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLane4
+            // 
+            firstLane4.BackColor = Color.White;
+			firstLane4.ForeColor = SystemColors.Control;
+			firstLane4.Location = new Point(119, 597);
+			firstLane4.Margin = new Padding(4, 0, 4, 0);
+			firstLane4.Name = "LaneOne4";
+			firstLane4.Size = new Size(20, 138);
+			firstLane4.TabIndex = 37;
+			firstLane4.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLane3
+            // 
+            firstLane3.BackColor = Color.White;
+			firstLane3.ForeColor = SystemColors.Control;
+			firstLane3.Location = new Point(119, 382);
+			firstLane3.Margin = new Padding(4, 0, 4, 0);
+			firstLane3.Name = "LaneOne3";
+			firstLane3.Size = new Size(20, 138);
+			firstLane3.TabIndex = 36;
+			firstLane3.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLane2
+            // 
+            firstLane2.BackColor = Color.White;
+			firstLane2.ForeColor = SystemColors.Control;
+			firstLane2.Location = new Point(119, 166);
+			firstLane2.Margin = new Padding(4, 0, 4, 0);
+			firstLane2.Name = "LaneOne2";
+			firstLane2.Size = new Size(20, 138);
+			firstLane2.TabIndex = 35;
+			firstLane2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // firstLane1
+            // 
+            firstLane1.BackColor = Color.White;
+			firstLane1.ForeColor = SystemColors.Control;
+			firstLane1.Location = new Point(119, -49);
+			firstLane1.Margin = new Padding(4, 0, 4, 0);
+			firstLane1.Name = "LaneOne1";
+			firstLane1.Size = new Size(20, 138);
+			firstLane1.TabIndex = 34;
+			firstLane1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // middleLane
+            // 
+            middleLane.BackColor = Color.White;
+			middleLane.ForeColor = SystemColors.Control;
+			middleLane.Location = new Point(245, -6);
+			middleLane.Margin = new Padding(4, 0, 4, 0);
+			middleLane.Name = "MiddleLane";
+			middleLane.Size = new Size(23, 872);
+			middleLane.TabIndex = 33;
+			middleLane.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // oncomingCarsTimer
+            // 
+            oncomingCarsTimer.Enabled = true;
+			oncomingCarsTimer.Interval = 1;
+			oncomingCarsTimer.Tick += OncomingCarsTimer_Tick;
+            // 
+            // menuTimer
+            // 
+            menuTimer.Enabled = true;
+			menuTimer.Interval = 1;
+			menuTimer.Tick += MenuTimer_Tick;
 			// 
 			// RaceGame
 			// 
@@ -702,7 +702,7 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.ButtonHighlight;
 			ClientSize = new Size(512, 865);
-			Controls.Add(panelGame);
+			Controls.Add(gamePanel);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			KeyPreview = true;
 			Margin = new Padding(4, 5, 4, 5);
@@ -712,76 +712,76 @@
 			Text = "Race";
 			Load += RaceGame_Load;
 			KeyDown += RaceGame_KeyDown;
-			panelGame.ResumeLayout(false);
-			panelGame.PerformLayout();
-			panelMenu.ResumeLayout(false);
-			panelMenu.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)CarMenu1).EndInit();
-			((System.ComponentModel.ISupportInitialize)CarMenu3).EndInit();
-			((System.ComponentModel.ISupportInitialize)CarMenu2).EndInit();
-			panelPause.ResumeLayout(false);
-			panelPause.PerformLayout();
+			gamePanel.ResumeLayout(false);
+			gamePanel.PerformLayout();
+			menuPanel.ResumeLayout(false);
+			menuPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)carMenu1).EndInit();
+			((System.ComponentModel.ISupportInitialize)carMenu3).EndInit();
+			((System.ComponentModel.ISupportInitialize)carMenu2).EndInit();
+			pausePanel.ResumeLayout(false);
+			pausePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureFlag).EndInit();
-			((System.ComponentModel.ISupportInitialize)towardCar2).EndInit();
-			((System.ComponentModel.ISupportInitialize)towardCar1).EndInit();
-			((System.ComponentModel.ISupportInitialize)towardCar3).EndInit();
-			((System.ComponentModel.ISupportInitialize)Coin3).EndInit();
-			((System.ComponentModel.ISupportInitialize)Coin2).EndInit();
-			((System.ComponentModel.ISupportInitialize)Coin1).EndInit();
+			((System.ComponentModel.ISupportInitialize)oncomingСar2).EndInit();
+			((System.ComponentModel.ISupportInitialize)oncomingCar1).EndInit();
+			((System.ComponentModel.ISupportInitialize)oncomingCar3).EndInit();
+			((System.ComponentModel.ISupportInitialize)coin3).EndInit();
+			((System.ComponentModel.ISupportInitialize)coin2).EndInit();
+			((System.ComponentModel.ISupportInitialize)coin1).EndInit();
 			((System.ComponentModel.ISupportInitialize)mainCar).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
-		private System.Windows.Forms.Timer timerRoad;
-		private System.Windows.Forms.Panel panelGame;
-		private System.Windows.Forms.Label LaneTwo5;
-		private System.Windows.Forms.Label LaneTwo4;
-		private System.Windows.Forms.Label LaneTwo3;
-		private System.Windows.Forms.Label LaneTwo2;
-		private System.Windows.Forms.Label LaneTwo1;
-		private System.Windows.Forms.Label LaneOne5;
-		private System.Windows.Forms.Label LaneOne4;
-		private System.Windows.Forms.Label LaneOne3;
-		private System.Windows.Forms.Label LaneOne2;
-		private System.Windows.Forms.Label LaneOne1;
-		private System.Windows.Forms.Label MiddleLane;
-		private System.Windows.Forms.PictureBox towardCar2;
-		private System.Windows.Forms.PictureBox towardCar3;
-		private System.Windows.Forms.PictureBox towardCar1;
+		private System.Windows.Forms.Timer roadTimer;
+		private System.Windows.Forms.Panel gamePanel;
+		private System.Windows.Forms.Label secondLane5;
+		private System.Windows.Forms.Label secondLane4;
+		private System.Windows.Forms.Label secondLane3;
+		private System.Windows.Forms.Label secondLane2;
+		private System.Windows.Forms.Label secondLane1;
+		private System.Windows.Forms.Label firstLane5;
+		private System.Windows.Forms.Label firstLane4;
+		private System.Windows.Forms.Label firstLane3;
+		private System.Windows.Forms.Label firstLane2;
+		private System.Windows.Forms.Label firstLane1;
+		private System.Windows.Forms.Label middleLane;
+		private System.Windows.Forms.PictureBox oncomingСar2;
+		private System.Windows.Forms.PictureBox oncomingCar3;
+		private System.Windows.Forms.PictureBox oncomingCar1;
 		private System.Windows.Forms.PictureBox mainCar;
-		private System.Windows.Forms.Timer timerTowardCars;
-		private System.Windows.Forms.Timer timerMenu;
-		private System.Windows.Forms.Label labelPause;
-		private System.Windows.Forms.Button buttonExit;
-		private System.Windows.Forms.Button buttonResume;
-		private System.Windows.Forms.Button buttonPause;
-		private System.Windows.Forms.PictureBox Coin1;
-		private System.Windows.Forms.PictureBox Coin3;
-		private System.Windows.Forms.PictureBox Coin2;
-		private System.Windows.Forms.Panel panelPause;
+		private System.Windows.Forms.Timer oncomingCarsTimer;
+		private System.Windows.Forms.Timer menuTimer;
+		private System.Windows.Forms.Label pauseLabel;
+		private System.Windows.Forms.Button exitButton;
+		private System.Windows.Forms.Button resumeButton;
+		private System.Windows.Forms.Button pauseButton;
+		private System.Windows.Forms.PictureBox coin1;
+		private System.Windows.Forms.PictureBox coin3;
+		private System.Windows.Forms.PictureBox coin2;
+		private System.Windows.Forms.Panel pausePanel;
 		private System.Windows.Forms.PictureBox pictureFlag;
-		private System.Windows.Forms.Label labelCoins;
-		private System.Windows.Forms.Label labelScore;
+		private System.Windows.Forms.Label coinsLabel;
+		private System.Windows.Forms.Label scoreLabel;
 		private System.Windows.Forms.Label label;
-		private Panel panelMenu;
-		private Button buttonHelp;
-		private Button buttonMenuExit;
-		private Button buttonStart;
+		private Panel menuPanel;
+		private Button helpButton;
+		private Button menuExitButton;
+		private Button startButton;
 		private Label label3;
-		private PictureBox CarMenu1;
-		private PictureBox CarMenu3;
-		private PictureBox CarMenu2;
-		private Label MenuTwoLane5;
-		private Label MenuTwoLane4;
-		private Label MenuTwoLane3;
-		private Label MenuTwoLane2;
-		private Label MenuTwoLane1;
-		private Label MenuOneLane5;
-		private Label MenuOneLane4;
-		private Label MenuOneLane3;
-		private Label MenuOneLane2;
-		private Label MenuOneLane1;
+		private PictureBox carMenu1;
+		private PictureBox carMenu3;
+		private PictureBox carMenu2;
+		private Label secondLaneMenu5;
+		private Label secondLaneMenu4;
+		private Label secondLaneMenu3;
+		private Label secondLaneMenu2;
+		private Label secondLaneMenu1;
+		private Label firstLaneMenu5;
+		private Label firstLaneMenu4;
+		private Label firstLaneMenu3;
+		private Label firstLaneMenu2;
+		private Label firstLaneMenu1;
 		private Label label12;
 	}
 }
