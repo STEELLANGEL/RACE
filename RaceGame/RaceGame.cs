@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RaceCommon;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Race
 {
@@ -20,6 +21,7 @@ namespace Race
         private int coins = 0;
         private int carSpeed = 2;
         const int moveStep = 9;
+        public string date;
 
         private Label[] firstLanes = new Label[5];
         private Label[] secondLanes = new Label[5];
@@ -43,6 +45,8 @@ namespace Race
 
         private void RaceGame_Load(object sender, EventArgs e)
         {
+            dateTimer.Start();
+
             user = new User(userNameLabel.Text);
 
             firstLanes[0] = firstLane1;
@@ -382,6 +386,11 @@ namespace Race
             resultForm f = new resultForm();
             f.Show();
             this.Hide();
+        }
+
+        private void dateTimer_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Now.ToString();
         }
     }
 }

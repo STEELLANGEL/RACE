@@ -36,6 +36,8 @@
             UserName = new DataGridViewTextBoxColumn();
             RightUnswer = new DataGridViewTextBoxColumn();
             score = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
+            dateLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)resultBoard).BeginInit();
             SuspendLayout();
             // 
@@ -84,15 +86,15 @@
             resultBoard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             resultBoard.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             resultBoard.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resultBoard.Columns.AddRange(new DataGridViewColumn[] { UserName, RightUnswer, score });
+            resultBoard.Columns.AddRange(new DataGridViewColumn[] { UserName, RightUnswer, score, Date });
             resultBoard.EditMode = DataGridViewEditMode.EditOnKeystroke;
-            resultBoard.Location = new Point(496, 89);
+            resultBoard.Location = new Point(420, 90);
             resultBoard.Name = "resultBoard";
             resultBoard.RowHeadersWidth = 30;
             resultBoard.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             resultBoard.RowTemplate.Height = 24;
             resultBoard.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            resultBoard.Size = new Size(471, 611);
+            resultBoard.Size = new Size(606, 610);
             resultBoard.TabIndex = 6;
             // 
             // UserName
@@ -113,11 +115,27 @@
             score.MinimumWidth = 6;
             score.Name = "score";
             // 
+            // Date
+            // 
+            Date.HeaderText = "Date/Time";
+            Date.MinimumWidth = 6;
+            Date.Name = "Date";
+            // 
+            // dateLabel
+            // 
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new Point(908, 29);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new Size(39, 20);
+            dateLabel.TabIndex = 7;
+            dateLabel.Text = "date";
+            // 
             // resultForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1064, 885);
+            Controls.Add(dateLabel);
             Controls.Add(resultBoard);
             Controls.Add(deliteResults);
             Controls.Add(userNameLabel);
@@ -143,5 +161,7 @@
         private DataGridViewTextBoxColumn UserName;
         private DataGridViewTextBoxColumn RightUnswer;
         private DataGridViewTextBoxColumn score;
+        private DataGridViewTextBoxColumn Date;
+        private Label dateLabel;
     }
 }

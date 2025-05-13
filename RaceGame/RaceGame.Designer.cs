@@ -34,6 +34,7 @@
             gamePanel = new Panel();
             pausePanel = new Panel();
             menuPanel = new Panel();
+            userNameLabel = new Label();
             resultButton = new Button();
             helpButton = new Button();
             menuExitButton = new Button();
@@ -81,7 +82,9 @@
             middleLane = new Label();
             oncomingCarsTimer = new System.Windows.Forms.Timer(components);
             menuTimer = new System.Windows.Forms.Timer(components);
-            userNameLabel = new Label();
+            dateTimer = new System.Windows.Forms.Timer(components);
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusStrip1 = new StatusStrip();
             gamePanel.SuspendLayout();
             pausePanel.SuspendLayout();
             menuPanel.SuspendLayout();
@@ -96,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)coin2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)coin1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mainCar).BeginInit();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // roadTimer
@@ -153,6 +157,7 @@
             // menuPanel
             // 
             menuPanel.BackColor = SystemColors.ControlDarkDark;
+            menuPanel.Controls.Add(statusStrip1);
             menuPanel.Controls.Add(userNameLabel);
             menuPanel.Controls.Add(resultButton);
             menuPanel.Controls.Add(helpButton);
@@ -178,6 +183,16 @@
             menuPanel.Name = "menuPanel";
             menuPanel.Size = new Size(515, 867);
             menuPanel.TabIndex = 57;
+            // 
+            // userNameLabel
+            // 
+            userNameLabel.AutoSize = true;
+            userNameLabel.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            userNameLabel.Location = new Point(16, 251);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(77, 38);
+            userNameLabel.TabIndex = 84;
+            userNameLabel.Text = "Имя";
             // 
             // resultButton
             // 
@@ -711,15 +726,26 @@
             menuTimer.Interval = 1;
             menuTimer.Tick += MenuTimer_Tick;
             // 
-            // userNameLabel
+            // dateTimer
             // 
-            userNameLabel.AutoSize = true;
-            userNameLabel.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            userNameLabel.Location = new Point(16, 251);
-            userNameLabel.Name = "userNameLabel";
-            userNameLabel.Size = new Size(77, 38);
-            userNameLabel.TabIndex = 84;
-            userNameLabel.Text = "Имя";
+            dateTimer.Interval = 1000;
+            dateTimer.Tick += dateTimer_Tick;
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(151, 20);
+            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 841);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(515, 26);
+            statusStrip1.TabIndex = 85;
+            statusStrip1.Text = "statusStrip1";
             // 
             // RaceGame
             // 
@@ -754,6 +780,8 @@
             ((System.ComponentModel.ISupportInitialize)coin2).EndInit();
             ((System.ComponentModel.ISupportInitialize)coin1).EndInit();
             ((System.ComponentModel.ISupportInitialize)mainCar).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -810,5 +838,8 @@
 		private Label label12;
         private Button resultButton;
         private Label userNameLabel;
+        private System.Windows.Forms.Timer dateTimer;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
