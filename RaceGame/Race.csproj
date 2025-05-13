@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RaceCommon\RaceCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Coin.png" />
     <Resource Include="Resources\mainCar1.png" />
     <Resource Include="Resources\mainCar2.png" />
