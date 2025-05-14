@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using RaceCommon;
-
-namespace Race
+﻿namespace Race
 {
     public partial class startForm : Form
     {
