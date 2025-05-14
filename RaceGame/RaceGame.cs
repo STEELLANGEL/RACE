@@ -1,4 +1,5 @@
 ﻿using RaceCommon;
+using WMPLib;
 
 namespace Race
 {
@@ -29,8 +30,11 @@ namespace Race
             userNameLabel.Text = userNameTransfer;
         }
 
+
         private void RaceGame_Load(object sender, EventArgs e)
         {
+            new WindowsMediaPlayer() { URL = "C:\\Users\\User\\source\\repos\\RACE_L\\RaceGame\\Skid.mp3" }.controls.play();
+
             dateTimer.Start();
 
             firstLanes[0] = firstLane1;
