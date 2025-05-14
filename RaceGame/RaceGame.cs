@@ -1,5 +1,6 @@
 ﻿using RaceCommon;
 using WMPLib;
+using System.Media;
 
 namespace Race
 {
@@ -19,6 +20,8 @@ namespace Race
 
         Random random = new Random();
 
+        public WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+
         public RaceGame()
         {
             InitializeComponent();
@@ -30,10 +33,12 @@ namespace Race
             userNameLabel.Text = userNameTransfer;
         }
 
-
         private void RaceGame_Load(object sender, EventArgs e)
         {
-            new WindowsMediaPlayer() { URL = @"Skid.mp3" }.controls.play();
+            WMP.URL = @"Cradle.wav";
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+
+            WMP.controls.play();
 
             dateTimer.Start();
 
@@ -325,6 +330,8 @@ namespace Race
 
         private void buttonMenuExit_Click(object sender, EventArgs e)
         {
+            WMP.controls.stop(); // Стоп
+            WMP.close();
             this.Close();
         }
 
@@ -373,6 +380,9 @@ namespace Race
 
         private void resultButton_Click(object sender, EventArgs e)
         {
+            WMP.controls.stop(); // Стоп
+            WMP.close();
+
             resultForm f = new resultForm(userNameLabel.Text);
             f.Show();
             this.Hide();

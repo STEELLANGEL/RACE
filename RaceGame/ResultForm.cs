@@ -29,7 +29,8 @@ namespace Race
         {
             RaceGame f = new RaceGame(userNameLabel.Text);
             f.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         public static string path = "userResults.json";
