@@ -33,7 +33,7 @@ namespace Race
 
         private void RaceGame_Load(object sender, EventArgs e)
         {
-            new WindowsMediaPlayer() { URL = "C:\\Users\\User\\source\\repos\\RACE_L\\RaceGame\\Skid.mp3" }.controls.play();
+            new WindowsMediaPlayer() { URL = "C:\\Users\\User\\source\\repos\\RACE_L\\RaceGame\\\\Resources\\AloneAgain.mp3" }.controls.play();
 
             dateTimer.Start();
 
