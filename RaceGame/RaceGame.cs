@@ -97,7 +97,7 @@ namespace Race
             }
             else
             {
-                DialogResult gameContinue = MessageBox.Show("Продолжить? (-15 coins)", "Приехали!",
+                DialogResult gameContinue = MessageBox.Show("Продолжить? (-3 coins)", "Приехали!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (gameContinue == DialogResult.Yes)
