@@ -21,14 +21,13 @@ namespace Race
         private int coins = 0;
         private int carSpeed = 2;
         const int moveStep = 9;
-        public string date;
 
         private Label[] firstLanes = new Label[5];
         private Label[] secondLanes = new Label[5];
         private Label[] firstLanesMenu = new Label[5];
         private Label[] secondLanesMenu = new Label[5];
 
-        public User user;
+        public User user = new User();
 
         Random random = new Random();
 
@@ -46,8 +45,6 @@ namespace Race
         private void RaceGame_Load(object sender, EventArgs e)
         {
             dateTimer.Start();
-
-            user = new User(userNameLabel.Text);
 
             firstLanes[0] = firstLane1;
             firstLanes[1] = firstLane2;
@@ -99,6 +96,8 @@ namespace Race
         {
             user.Coin = coins;
             user.Score = score / 10;
+            user.SaveTime = toolStripStatusLabel1.Text;
+            user.Name = userNameLabel.Text;
 
             roadTimer.Stop();
             oncomingCarsTimer.Stop();
@@ -383,7 +382,7 @@ namespace Race
 
         private void resultButton_Click(object sender, EventArgs e)
         {
-            resultForm f = new resultForm();
+            resultForm f = new resultForm(userNameLabel.Text);
             f.Show();
             this.Hide();
         }

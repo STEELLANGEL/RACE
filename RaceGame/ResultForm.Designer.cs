@@ -61,11 +61,11 @@
             closeResultButton.UseVisualStyleBackColor = true;
             closeResultButton.Click += outFromResultButton_Click;
             // 
-            // userNameLabel
+            // userLabel
             // 
             userNameLabel.AutoSize = true;
             userNameLabel.Location = new Point(27, 18);
-            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Name = "userLabel";
             userNameLabel.Size = new Size(139, 20);
             userNameLabel.TabIndex = 4;
             userNameLabel.Text = "Имя пользователя";
